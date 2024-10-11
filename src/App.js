@@ -1,25 +1,36 @@
-import logo from './logo.svg';
-import './App.css';
+import * as React from 'react';
+import { LineChart } from '@mui/x-charts/LineChart';
 
-function App() {
+const uData = [4000, 3000, 2000, 2780, 1890, 2390, 3490, 6000, 8000];
+const pData = [2400, 1398, 9800, 3908, 4800, 3800, 4300, 5000, 3000];
+const xLabels = [
+  'Page A',
+  'Page B',
+  'Page C',
+  'Page D',
+  'Page E',
+  'Page F',
+  'Page G',
+  'Page H',
+  'Page I',
+  'Page J',
+  'Page K',
+  'Page L',
+  'Page M',
+  'Page N',
+];
+
+function SimpleLineChart() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <LineChart
+      width={500}
+      height={300}
+      series={[
+        { data: pData, label: 'pv' },
+        { data: uData, label: 'uv' },
+      ]}
+      xAxis={[{ scaleType: 'point', data: xLabels }]}
+    />
   );
 }
-
-export default App;
+export default SimpleLineChart;
