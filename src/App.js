@@ -11,7 +11,12 @@ function App() {
     <div style={styles.outerContainer}>
       <header style={styles.header}>
         <span style={styles.headerText}>MDDInsider</span>
-        <img src="./assets/ic-round-menu.svg" alt="Menu" style={styles.menuIcon} />
+        {/* <img src="./assets/ic-round-menu.svg" alt="Menu" style={styles.menuIcon} /> */}
+        <ul>
+          <li>About</li>
+          <li>Shop</li>
+          <li>Contact</li>
+        </ul>
       </header>
 
       <section style={styles.introSection}>
