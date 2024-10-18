@@ -1,5 +1,10 @@
 import React from 'react';
 import './App.css'; // Import the CSS file for styles
+import img from './img/1.png';
+import img2 from './img/2.png';
+import img3 from './img/3.jpeg';
+import img4 from './img/4.png';
+import logo1 from './img/logo.png';
 
 function App() {
   return (
@@ -26,16 +31,16 @@ function App() {
         number="1"
         title="Results Happen Quicker Than You’d Expect"
         text={`Most women say that within a few days of using MyoGlow, they start noticing BIG improvements in the texture and tone of their skin. That’s because MyoGlow uses therapies which target the root cause of sagging skin while promoting collagen production. And by rejuvenating skin overtime, you get a long lasting toned look & fresh glow that’s hard to achieve with other skincare products.`}
-        imageLeft="./assets/pic.svg"
-        imageRight="./assets/pic-2.svg"
+        imageLeft={img}
+        imageRight={img2}
       />
 
       <Section
         number="2"
         title="MyoGlow is Gentle On Your Face"
         text={`Botox & Fillers wear off over time & are proven to permanently age your skin. Meanwhile the technology in MyoGlow is shown to renew life into every cell in your skin helping you age gracefully. Each therapy is non-invasive & loved by estheticians & dermatologists.`}
-        imageLeft="./assets/frame-1000005406.svg"
-        imageRight="./assets/rectangle-376-2.svg"
+        imageLeft={img3}
+        imageRight={img4}
         reverse
       />
 
@@ -43,7 +48,7 @@ function App() {
 
       <footer style={styles.footer}>
         <div style={styles.footerContent}>
-          <img src="./assets/logo.svg" alt="Logo" style={styles.logo} />
+          <img src={logo1} alt="Logo" style={styles.logo} />
           <p style={styles.footerText}>
             These statements have not been evaluated by the Food and Drug Administration. The contents
             of this website/e-mail are for informational purposes only and are not intended to be a
